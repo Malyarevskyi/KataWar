@@ -214,4 +214,26 @@ public class KataTest {
         }
     }
 
+    @Test
+    public void examples() {
+        // assertEquals("expected", "actual");
+        assertEquals(1, Kata.hexToDec("1"));
+        assertEquals(10, Kata.hexToDec("a"));
+        assertEquals(16, Kata.hexToDec("10"));
+        assertEquals(255, Kata.hexToDec("FF"));
+        assertEquals(-12, Kata.hexToDec("-C"));
+    }
+
+    @Test
+    public void random() {
+        final Random random = new Random();
+        for (int r = 0; r < 40; r++) {
+            final int sign = (Math.random() < 0.5 ? -1: 1);
+            final int n = sign * random.nextInt(10000);
+            final String hexString = (sign > 0 ? "" : "-") + Integer.toHexString(Math.abs(n));
+            // assertEquals("expected", "actual");
+            assertEquals(n, Kata.hexToDec(hexString));
+        }
+    }
+
 }

@@ -72,10 +72,14 @@ public class Kata {
         return text + Integer.toString(0);
     }
 
-//    public static String position(char alphabet)
+    //    public static String position(char alphabet)
 //    {
 //        return "Position of alphabet: " + ((int) alphabet - 96);
 //    }
+
+    public static int hexToDec(final String hexString) {
+        return Integer.parseInt(hexString, 16);
+    }
 
 
 }
