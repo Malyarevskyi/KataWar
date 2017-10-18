@@ -81,5 +81,28 @@ public class Kata {
         return Integer.parseInt(hexString, 16);
     }
 
+    public static String findNeedle(Object[] haystack) {
+        for (int i = 0; i < haystack.length; i++) {
+            if (haystack[i] == "needle")
+                return "found the needle at position " + i;// Your code here
+        }
+        return "the needle not found";
+    }
+
+//    public static String findNeedle(Object[] haystack) {
+//        return String.format("found the needle at position %d", java.util.Arrays.asList(haystack).indexOf("needle"));
+//    }
+
+    public static int rentalCarCost(int d) {
+        return (d < 4) ? d * 40 - 20 : (d > 6) ? d * 40 - 50 : d * 40;// Your solution here
+    }
+
+    public static String stringy(int size) {
+        String str = "";
+        for (int i = 0; i < size; i++) {
+            str += ((i % 2) == 0) ? "1" : "0";
+        }
+        return str;
+    }
 
 }
